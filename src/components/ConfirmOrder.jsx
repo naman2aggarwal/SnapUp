@@ -1,20 +1,26 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export default function ConfirmOrder() {
+export default function ConfirmOrder(props) {
+  const location = useLocation();
+  const { id } = location.item;
   const [address, setAddress] = useState("");
   const [flag, setFlag] = useState(true);
-  const product = {
-    total: 439.8,
-    quantity: 4,
-    id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description:
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-  };
+  const [product, setProduct] = useState([]);
+
+  async function fetchData() {
+    try {
+      const response = await fetch(`http://localhost:8000/Cart/${id}`);
+      const data = await response.json();
+      setProduct(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   function handleSubmit() {
     localStorage.setItem("address", JSON.stringify(address));
   }
@@ -27,7 +33,9 @@ export default function ConfirmOrder() {
             {product.title}
           </a>
           <p className="card-text">{product.description}</p>
-          <span className="product-price">₹{Math.round(product.total)}</span>
+          <span className="product-price">
+            ₹{Math.round(product.total) || Math.round(product.price)}
+          </span>
         </div>
       </div>
       {localStorage.getItem("address") && flag === true ? (

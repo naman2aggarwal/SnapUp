@@ -22,7 +22,7 @@ export default function Cart() {
 
   useEffect(() => {
     fetchData();
-  }, [cart]);
+  }, []);
   return (
     <div className="cart">
       {cart.length === 0 ? (
@@ -98,7 +98,7 @@ export default function Cart() {
                       </div>
                       <Link
                         className="btn btn-success"
-                        to="#"
+                        to={{ pathname: "/confirm", item: { id: product.id } }}
                         onClick={() => {
                           dispatch({
                             type: productActions.placeOrder,

@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Order from "./components/Order";
+import ConfirmOrder from "./components/ConfirmOrder";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/order">
           <Order />
+        </Route>
+        <Route exact path="/confirm">
+          <ConfirmOrder />
         </Route>
       </Switch>
 
