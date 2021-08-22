@@ -1,33 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="It is an ecommerce store created for learning purpose."
-    />
-    <title>SnapUp</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="png" href="logo.png">
+  <title>SnapUP : Online shopping site</title>
 
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  
+  <link rel="stylesheet" href="./style.css"/>
+  
+</head>
+<body>
+  <!--navigation bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <img src="logo.png">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i id="bar" class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <i class="fad fa-shopping-bag"></i>
+          </li>
+          
+      </div>
+    </div>
+  </nav>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <section id="home">
+    <div class="container">
+      <h5>Fashion Essentials For Mens</h5>
+      <h1>Up to<span> 70% Off</span> </h1>
+      <p class="para">Sweater,Dress,Hoodies,T-shirt,Flip-flops,Shorts,<br>
+        Jeans
+        ,Shoes
+        ,Coat
+        ,Cap
+        ,Socks
+        ,Shirt,<br>
+        Leather jackets & more</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+  <section id="brand" class="container">
+    <div class="row m-0 py-5">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/1.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/2.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/3.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/4.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/5.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="brand/6.png" alt="">
+    </div>
+  </section>
+   
+  <section id="new" class="w-100">
+    <div class="row p-0 m-0">
+      <div class="one col-lg-4 col-md-12 col-12 p-0">
+        <img class="img-fluid" src="banner/1.jpg" alt="">
+        <div class="details">
+          <h2>Extreme Rare Sneakers</h2>
+          <h4 class="design">Starting from ₹599 onwards...</h4>
+        </div>
+      </div>
+      <div class="one col-lg-4 col-md-12 col-12 p-0">
+        <img class="img-fluid" src="banner/4.jpg" alt="">
+        <div class="details">
+          <h3 class="design2">Up To 30% Off on</h3>
+          <h2>Awesome Blank Outfit</h2>
+        </div>
+      </div>
+      <div class="one col-lg-4 col-md-12 col-12 p-0">
+        <img class="img-fluid" src="banner/3.jpg" alt="">
+        <div class="details">
+          <h2>Sportswear Up To 50% Off</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured" class="my-5 pb-5"> 
+    <div class="container text-center mt-5 py-5">
+      <h3>Our Featured</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out new products with fair price on SnapUp</p>
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="featured/1.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Sports Boots</h5>
+        <h4 class="p-price">₹2,399  <del> ₹2,599 </del><br> 7% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="featured/2.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Leather Shoe</h5>
+        <h4 class="p-price">₹1,499  <del> ₹2,100 </del><br> 28% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="featured/3.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">School Bag</h5>
+        <h4 class="p-price">₹1,299  <del> ₹1,999 </del><br> 35% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="featured/4.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Winter Cap</h5>
+        <h4 class="p-price">₹899  <del> ₹2,199 </del><br> 59% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="banner" class="my-5 py-5">
+    <div class="container">
+      <h4>MID SEASON'S SALE</h4>
+      <h1>Autumn Collection<br>UP TO 25% OFF</h1>
+    </div>
+  </section>
+
+  <section id="clothes" class="my-5 "> 
+    <div class="container text-center mt-5 py-5">
+      <h3> Shirts,jackets & jumpsuits</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out new products with fair price on SnapUp</p>
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/1.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Long Shirt</h5>
+        <h4 class="p-price">₹1,440  <del> ₹1,599 </del><br> 10% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/2.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">White Dress</h5>
+        <h4 class="p-price">₹1,499  <del> ₹1,999 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/3.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">T-Shirt</h5>
+        <h4 class="p-price">₹799  <del> ₹999 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/4.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Boyfriend T-Shirt</h5>
+        <h4 class="p-price">₹899  <del> ₹1,199 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/5.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Mens Jacket</h5>
+        <h4 class="p-price">₹2,399  <del> ₹2,599 </del><br> 7% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/6.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Full T-Shirt</h5>
+        <h4 class="p-price">₹899  <del> ₹2,199 </del><br> 59% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/7.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Mens Kurta</h5>
+        <h4 class="p-price">₹1,999  <del> ₹2,599 </del><br> 23% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="clothes/8.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Mens Shirt</h5>
+        <h4 class="p-price">₹1,499  <del> ₹2,100 </del><br> 28% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="watches" class="my-5 "> 
+    <div class="container text-center mt-1 py-1">
+      <h3>Bracelet & Watches</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out new products with fair price on SnapUp</p>
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/1.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Fastrack</h5>
+        <h4 class="p-price">₹399  <del> ₹799 </del><br> 50% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/2.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Casio</h5>
+        <h4 class="p-price">₹1,499  <del> ₹1,999 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/5.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Bracelet</h5>
+        <h4 class="p-price">₹299  <del> ₹599 </del><br> 50% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/3.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Cartier</h5>
+        <h4 class="p-price">₹1,499  <del> ₹2,199 </del><br> 32% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/6.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Tanishq</h5>
+        <h4 class="p-price">₹2,399  <del> ₹2,599 </del><br> 7% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/4.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Timewear</h5>
+        <h4 class="p-price">₹899  <del> ₹1,199 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/7.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Sonata</h5>
+        <h4 class="p-price">₹999  <del> ₹1,599 </del><br> 37% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="watches/8.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Titan</h5>
+        <h4 class="p-price">₹899  <del> ₹1,499 </del><br> 40% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="shoes" class="my-5 pb-5"> 
+    <div class="container text-center mt-3 py-3">
+      <h3>Sports and Running Shoes</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out new products with fair price on SnapUp</p>
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/1.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Destilo Shoes</h5>
+        <h4 class="p-price">₹1,499  <del> ₹1,999 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/7.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Red Rose</h5>
+        <h4 class="p-price">₹899  <del> ₹1,100 </del><br> 25% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/2.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Campus</h5>
+        <h4 class="p-price">₹1,299  <del> ₹1,999 </del><br> 35% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/3.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Reebok</h5>
+        <h4 class="p-price">₹1,799  <del> ₹2,499 </del><br> 28% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/6.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Nike</h5>
+        <h4 class="p-price">₹2,399  <del> ₹2,599 </del><br> 7% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/5.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h5 class="p-name">Puma</h5>
+        <h4 class="p-price">₹899  <del> ₹2,199 </del><br> 59% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/4.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Running Shoes</h5>
+        <h4 class="p-price">₹1,199  <del> ₹1,999 </del><br> 40% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="shoes/8.jpg" alt="">
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h5 class="p-name">Leather Shoe</h5>
+        <h4 class="p-price">₹1,499  <del> ₹2,100 </del><br> 28% off</h4>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <img src="logo.png" alt="">
+        <p class="pt-3">bvwabb dbybwqyby  ebwycbywbc yewvcfywq bweybcwb webbquww
+          bwbwb bwbcw qw73quncc cewycw8 wcbcb .
+        </p>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="text-uppercase list-unstyled">
+          <li><a href="#">men</a></li>
+          <li><a href="#">women</a></li>
+          <li><a href="#">boys</a></li>
+          <li><a href="#">girls</a></li>
+          <li><a href="#">new arrivals</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">cloths</a></li>
+        </ul>
+      </div>  
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2">Contact Us</h5>
+          <div>
+            <h6 class="text-uppercase">Address</h6>
+            <p>COMET Team,Devenest Server,Discord,INDIA</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Phone</h6>
+            <p>(0674) 2765890</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">MAIL</h6>
+            <p>mail@example.com</p>
+          </div>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+          <h5 class="pb-2"></h5>
+          <div class="row">
+
+          </div>
+        </div>  
+      </div>
+      <div class="copyright mt-5">
+        <div class="row container mx-auto">
+          <div class="col-lg-3 col-md-6 col-12 mb-4">
+            <img src="payment.png" alt="">
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+            <p>snapup eCommerce © 2021. All Rights Reserved</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 ">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" 
+  integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" 
+  integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" 
+  crossorigin="anonymous"></script>
+</body>
 </html>
