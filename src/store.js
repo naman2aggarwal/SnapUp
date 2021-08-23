@@ -1,19 +1,7 @@
-//Prototype for states to be used
+import rootReducer from "./reducers";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
-// Products: Product[],
-// SelectedProduct: Product,
-// Cart: Product[],
-// Orders: Product[],
-// Address: {StreetAdress, City, State, ZipCode, Country }
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
-//Description of Product:
-// Product {id, title, price, description, category, quantity, image, color}
-
-//Components
-//App
-// Header
-// ProductContainer
-//     Product
-//     Cart
-//     Orders
-// Footer
+export default store;
