@@ -5,37 +5,45 @@ import { GetProductDetail } from "../actions";
 import Loader from "./Loader";
 
 const Product = ({ product, quantity, setQuantity }) => {
-  const { title, price, description, image } = product;
+  const { title, category, price, description, image } = product;
   return (
     <>
-      <div className="product-detail-image">
-        <img src={image} alt={title} />
-      </div>
-      <div className="product-detail-info">
-        <div className="product-detail-title">{title}</div>
-        <div className="product-detail-desc">{description}</div>
-        <div className="product-detail-price">{price}</div>
-        <div className="product-detail-cart">
-          <button
-            className="inc-prod-quant"
-            onClick={() => {
-              setQuantity((state) => state + 1);
-            }}
-          >
-            +
-          </button>
-          <span>{quantity}</span>
-          <button
-            className="dec-prod-quant"
-            onClick={() => {
-              setQuantity((state) => state - 1);
-            }}
-          >
-            -
-          </button>
-          <button className="add-to-cart">Add to cart</button>
+      <section className="container sproduct my-5 pt-5">
+        <div className="row mt-5">
+          <div className="col-lg-5 col-md-12 col-12">
+            <img className="img-fluid w-100" src={image} alt={title} />
+          </div>
+          <div className="col-lg-6 col-md-12 col-12">
+            <h6>Home/{category}</h6>
+            <h3 className="py-4">{title}</h3>
+            <h2>${price}</h2>
+            <label htmlFor="prod-quantity" className="qty-label">
+              Quantity:
+            </label>
+            <input
+              id="prod-quantity"
+              type="number"
+              min="1"
+              defaultValue="1"
+              onChange={(e) => {
+                console.log(e.target.value);
+                setQuantity(e.target.value);
+              }}
+            />
+            <button
+              className="buy-btn"
+              onClick={() => {
+                console.log(quantity);
+              }}
+            >
+              Add To Cart
+            </button>
+            <button className="buy-btn">Buy Now</button>
+            <h4 className="mt-5 mb-5">Product Details:</h4>
+            <span>{description}</span>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
@@ -51,7 +59,7 @@ const ProductDetail = () => {
   }, []);
 
   return (
-    <div className="product-detail">
+    <div classNameName="product-detail">
       {selectedProduct ? (
         <Product
           product={selectedProduct}

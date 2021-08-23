@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductListing from "./components/ProductListing";
 import ProductDetail from "./components/ProductDetail";
-
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,8 @@ function App() {
             // <Route exact path="/orders" component={Orders} />
             //   <Route exact path="/cart" component={Cart} />
           }
-          <Route exact path="/:id" component={ProductDetail} />
+          <Route exact path="/products/:id" component={ProductDetail} />
+          <Route path="/" component={NotFound} />
         </Switch>
         <Footer />
       </Router>
