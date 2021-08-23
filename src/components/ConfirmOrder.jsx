@@ -10,7 +10,7 @@ export default function ConfirmOrder(props) {
 
   async function fetchData() {
     try {
-      const response = await fetch(`http://localhost:8000/Cart/${id}`);
+      const response = await fetch(`http://localhost:3000/Cart/${id}`);
       const data = await response.json();
       setProduct(data);
     } catch (error) {

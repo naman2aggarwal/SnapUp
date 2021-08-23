@@ -4,7 +4,7 @@ export default function Order() {
   const [orders, setOrders] = useState([]);
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:8000/Orders");
+      const response = await fetch("http://localhost:3000/Orders");
       const data = await response.json();
       setOrders(data);
     } catch (error) {

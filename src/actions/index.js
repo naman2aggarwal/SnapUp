@@ -1,4 +1,4 @@
-import addToCart from './CartActions';
+import addToCart from "./CartActions";
 
 import { getAllProducts, getProductById } from "../services/ProductService";
 
@@ -46,14 +46,13 @@ function GetProductDetail(id) {
   };
 }
 
-
 const productActions = {
-    incQuantity: "INC_QUANTITY",
-    decQuantity: "DEC_QUANTITY",
-    setData: "SET_DATA",
-    removeItem: "REMOVE_ITEM",
-    placeOrder: "PLACE_ORDER",
-    addToCart: addToCart
+  incQuantity: "INC_QUANTITY",
+  decQuantity: "DEC_QUANTITY",
+  setData: "SET_DATA",
+  removeItem: "REMOVE_ITEM",
+  placeOrder: "PLACE_ORDER",
+  addToCart: "addToCart",
 };
 
-export {LoadProducts, ResetSelectedProduct, GetProductDetail, productActions };
+export { LoadProducts, ResetSelectedProduct, GetProductDetail, productActions };

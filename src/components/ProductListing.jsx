@@ -17,7 +17,7 @@ const ProductCardList = ({ productList }) => {
   return (
     <div className="row mx-auto container-fluid">
       {productList.map((product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );

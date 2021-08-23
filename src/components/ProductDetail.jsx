@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { GetProductDetail } from "../actions";
+import addToCart from "../actions/CartActions";
 import Loader from "./Loader";
 
 const Product = ({ product, quantity, setQuantity }) => {
-  const { title, category, price, description, image } = product;
+  const { id, title, category, price, description, image } = product;
   return (
     <>
       <section className="container sproduct my-5 pt-5">
@@ -33,7 +34,7 @@ const Product = ({ product, quantity, setQuantity }) => {
             <button
               className="buy-btn"
               onClick={() => {
-                console.log(quantity);
+                addToCart(id, quantity);
               }}
             >
               Add To Cart
@@ -59,7 +60,7 @@ const ProductDetail = () => {
   }, []);
 
   return (
-    <div classNameName="product-detail">
+    <div className="product-detail">
       {selectedProduct ? (
         <Product
           product={selectedProduct}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import productActions from "../actions/index";
+import { productActions } from "../actions/index";
 import { useDispatch } from "react-redux";
 
 export default function Cart() {
@@ -8,7 +8,7 @@ export default function Cart() {
   const dispatch = useDispatch();
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:8000/Cart");
+      const response = await fetch("http://localhost:3000/Cart");
       const data = await response.json();
       setCart(data);
       dispatch({

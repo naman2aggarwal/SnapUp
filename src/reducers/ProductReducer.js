@@ -14,7 +14,7 @@ const CartReducer = (state = [], action) => {
         },
         body: JSON.stringify(product),
       };
-      fetch(`http://localhost:8000/Cart/${action.payload.id}`, requestOptions);
+      fetch(`http://localhost:3000/Cart/${action.payload.id}`, requestOptions);
       return state;
 
     case "DEC_QUANTITY":
@@ -30,7 +30,7 @@ const CartReducer = (state = [], action) => {
           body: JSON.stringify(data),
         };
         fetch(
-          `http://localhost:8000/Cart/${action.payload.id}`,
+          `http://localhost:3000/Cart/${action.payload.id}`,
           requestOptions
         );
       }
@@ -45,7 +45,7 @@ const CartReducer = (state = [], action) => {
           },
         });
       }
-      deleteItem(`http://localhost:8000/Cart/${action.payload}`);
+      deleteItem(`http://localhost:3000/Cart/${action.payload}`);
       return state;
 
     default:
@@ -59,7 +59,7 @@ const OrderReducer = (state = [], action) => {
       async function fetchData() {
         try {
           const response = await fetch(
-            `http://localhost:8000/Cart/${action.payload}`
+            `http://localhost:3000/Cart/${action.payload}`
           );
           const product = await response.json();
 
@@ -72,7 +72,7 @@ const OrderReducer = (state = [], action) => {
             });
           }
 
-          deleteItem(`http://localhost:8000/Cart/${action.payload}`);
+          deleteItem(`http://localhost:3000/Cart/${action.payload}`);
 
           const requestOptions = {
             method: "POST",
@@ -81,7 +81,7 @@ const OrderReducer = (state = [], action) => {
             },
             body: JSON.stringify(product),
           };
-          fetch(`http://localhost:8000/Orders`, requestOptions);
+          fetch(`http://localhost:3000/Orders`, requestOptions);
         } catch (error) {
           console.error(error);
         }
