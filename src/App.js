@@ -6,6 +6,10 @@ import Footer from "./components/Footer";
 import ProductListing from "./components/ProductListing";
 import ProductDetail from "./components/ProductDetail";
 import NotFound from "./components/NotFound";
+import Order from "./components/Order";
+import ConfirmOrder from "./components/ConfirmOrder";
+import Cart from './components/Cart';
+
 function App() {
   return (
     <div className="App">
@@ -13,13 +17,13 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={ProductListing} />
-          {
-            //   <Route exact path="/about" component={About} />
-            // <Route exact path="/contact" component={Contact} />
-            // <Route exact path="/orders" component={Orders} />
-            //   <Route exact path="/cart" component={Cart} />
-          }
+          
+            <Route exact path="/orders" component={Order} />
+            <Route exact path="/cart" component={Cart} />
+          
           <Route exact path="/products/:id" component={ProductDetail} />
+          <Route exact path="/confirm" component={ConfirmOrder } />
+          
           <Route path="/" component={NotFound} />
         </Switch>
         <Footer />
@@ -27,5 +31,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

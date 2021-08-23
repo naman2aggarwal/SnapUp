@@ -304,4 +304,126 @@ button a {
 .qty-label {
   margin-right: 10px;
   font-size: 1.2rem;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.cart {
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: inherit;
+}
+
+.card img {
+  height: 112px;
+  width: 112px;
+}
+
+a {
+  color: black;
+}
+
+a::after {
+  color: blue;
+}
+
+.card-text {
+  color: #878787;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.minus,
+.plus {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(#fff, #f9f9f9);
+  display: inline-block;
+  border: 1px solid #c2c2c2;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.quantity {
+  display: inline-block;
+  padding: 2px 6px;
+  width: 46px;
+  height: 28px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #c2c2c2;
+  margin: 0 5px;
+}
+
+.quantity-no {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.product-buttons {
+  margin: 5px 0px;
+}
+
+.remove {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.remove:hover {
+  color: blue;
+}
+
+.card * {
+  margin: 0px 5px;
+}
+
+.place-order {
+  text-align: right;
+}
+
+.btn-success {
+  color: white;
+  margin-left: 25px;
+}
+
+.my-cart {
+  display: flex;
+  width: 65%;
+}
+
+.product-details {
+  margin: 0px 5px;
+  display: inline-block;
+  width: 33.33%;
+}
+
+.price-head {
+  display: block;
+  padding: 13px 24px;
+}
+
+.random {
+  display: flex;
+  justify-content: space-between;
 }

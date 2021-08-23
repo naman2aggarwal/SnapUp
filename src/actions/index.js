@@ -1,3 +1,5 @@
+import addToCart from './CartActions';
+
 import { getAllProducts, getProductById } from "../services/ProductService";
 
 function LoadProducts() {
@@ -44,4 +46,14 @@ function GetProductDetail(id) {
   };
 }
 
-export { LoadProducts, ResetSelectedProduct, GetProductDetail };
+
+const productActions = {
+    incQuantity: "INC_QUANTITY",
+    decQuantity: "DEC_QUANTITY",
+    setData: "SET_DATA",
+    removeItem: "REMOVE_ITEM",
+    placeOrder: "PLACE_ORDER",
+    addToCart: addToCart
+};
+
+export {LoadProducts, ResetSelectedProduct, GetProductDetail, productActions };
